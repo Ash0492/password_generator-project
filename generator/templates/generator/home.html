@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title></title>
+  </head>
+  <body>
+  <div class="container">
+    <center><h1>PASSWORD GENERATOR</h1></center>
+      <Center><form action="{%url 'pass'%}">
+            <select name="length">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12" selected="selected">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+            </select> Length
+            <br><p>
+            <input type="checkbox" name="Uppercase">Uppercase
+            <br><p>
+            <input type="checkbox" name="Numbers"> Numbers
+            <br><p>
+            <input type="checkbox" name="special"> Special Characters
+            <br><p><p>
+              <input type="submit" value="Generate Password!" class="btn btn-primary">
+        </center>
+      </form>
+    </div>
+    <p> <br>
+      <div class="contianer">
+    <center><a href="{% url 'about' %}"> <button type='button' class="btn btn-success"> About Us </button> </a> </center>
+  </div>
+  </body>
+</html>
