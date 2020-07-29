@@ -1,13 +1,40 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+    #select_pass{
+      display: inline-block;
+      text-align: left;
+      float: center;
+
+    }
+      .masthead {
+        background-size: 1800px 900px;
+        height: 60vh;
+        min-height: 100px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+  }
+  </style>
     <title></title>
   </head>
   <body>
+    <header class="masthead" style="background-image: url('{% static 'generator/For_header.jpg' %}')";">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+       <h1 class="font-weight-light"><stron>PASSWORD GENERATOR</strong></h1>
+      </div>
+    </div>
+  </div>
+</header>
   <div class="container">
-    <center><h1>PASSWORD GENERATOR</h1></center>
+    <center><h1></h1></center>
       <Center><form action="{%url 'pass'%}">
             <select name="length">
                 <option value="6">6</option>
@@ -21,18 +48,19 @@
                 <option value="14">14</option>
             </select> Length
             <br><p>
+        <div id="select_pass">
             <input type="checkbox" name="Uppercase">Uppercase
             <br><p>
             <input type="checkbox" name="Numbers"> Numbers
-            <br><p>
+            <br>
             <input type="checkbox" name="special"> Special Characters
-            <br><p><p>
+            <br><p>
               <input type="submit" value="Generate Password!" class="btn btn-primary">
+          </div>
         </center>
       </form>
     </div>
-    <p> <br>
-      <div class="contianer">
+      <div class="container">
     <center><a href="{% url 'about' %}"> <button type='button' class="btn btn-success"> About Us </button> </a> </center>
   </div>
   </body>
